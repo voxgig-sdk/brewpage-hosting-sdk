@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://kochetkov-ma.github.io/brewpage-openapi/"
+      }
+      description: "BrewPage is a hosting platform that allows users to publish HTML pages, key-value data, JSON documents, and files without the need for signup. Users can publish content instantly through various methods, including a web interface, API calls, and integration with AI agents."
+      servers: [
+        {
+          description: "BrewPage API Server"
+          url: "https://brewpage.app/api"
+        }
+      ]
+      summary: "BrewPage is a hosting platform that allows users to publish HTML pages, key-value data, JSON documents, and files without the need for signup."
+      title: "BrewPage Hosting API"
+      version: "1.0.0"
+      website: "https://brewpage.app"
+    }
+  }
+}
+

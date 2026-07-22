@@ -1,0 +1,47 @@
+# Entity: stat
+
+main: kit: entity: stat: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "total_resource"
+      req: false
+      type: "`$INTEGER`"
+    }
+    {
+      name: "total_view"
+      req: false
+      type: "`$INTEGER`"
+    }
+    {
+      name: "views_today"
+      req: false
+      type: "`$INTEGER`"
+    }
+  ]
+
+  name: "stat"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/stats"
+          parts: [
+            "stats"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

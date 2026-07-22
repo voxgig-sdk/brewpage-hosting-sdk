@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "stat": {
+      "STAT00": {
+        "total_resource": "s1e",
+        "total_view": "s1f",
+        "views_today": "s20",
+        "id": "STAT00"
+      },
+      "STAT01": {
+        "total_resource": "s3c",
+        "total_view": "s3d",
+        "views_today": "s3e",
+        "id": "STAT01"
+      },
+      "STAT02": {
+        "total_resource": "s5a",
+        "total_view": "s5b",
+        "views_today": "s5c",
+        "id": "STAT02"
+      }
+    }
+  },
+  "new": {
+    "stat": {
+      "stat_ref01": {
+        "total_resource": "s78",
+        "total_view": "s79",
+        "views_today": "s7a"
+      }
+    }
+  }
+}

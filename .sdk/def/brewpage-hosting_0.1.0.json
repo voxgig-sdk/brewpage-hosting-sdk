@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "BrewPage Hosting API",
+    "description": "BrewPage is a hosting platform that allows users to publish HTML pages, key-value data, JSON documents, and files without the need for signup. Users can publish content instantly through various methods, including a web interface, API calls, and integration with AI agents.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://kochetkov-ma.github.io/brewpage-openapi/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://brewpage.app/api",
+      "description": "BrewPage API Server"
+    }
+  ],
+  "paths": {
+    "/stats": {
+      "get": {
+        "summary": "Get platform-wide usage stats",
+        "description": "Returns platform-wide usage statistics including total views, total resources, and views today",
+        "operationId": "getStats",
+        "tags": [
+          "Statistics"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with platform statistics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "totalViews": {
+                      "type": "integer",
+                      "description": "Total number of views across all resources",
+                      "example": 1000000
+                    },
+                    "totalResources": {
+                      "type": "integer",
+                      "description": "Total number of resources hosted on the platform",
+                      "example": 5000
+                    },
+                    "viewsToday": {
+                      "type": "integer",
+                      "description": "Number of views recorded today",
+                      "example": 1500
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Statistics",
+      "description": "Platform statistics and metrics"
+    }
+  ]
+}
