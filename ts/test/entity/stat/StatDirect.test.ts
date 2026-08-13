@@ -19,11 +19,15 @@ import {
 describe('StatDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when BREWPAGEHOSTING_TEST_LIVE=TRUE.
-  afterEach(liveDelay('BREWPAGEHOSTING_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when BREWPAGE_HOSTING_TEST_LIVE=TRUE.
+  afterEach(liveDelay('BREWPAGE_HOSTING_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new BrewpageHostingSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -72,17 +76,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'BREWPAGEHOSTING_TEST_STAT_ENTID': {},
-    'BREWPAGEHOSTING_TEST_LIVE': 'FALSE',
+    'BREWPAGE_HOSTING_TEST_STAT_ENTID': {},
+    'BREWPAGE_HOSTING_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.BREWPAGEHOSTING_TEST_LIVE
+  const live = 'TRUE' === env.BREWPAGE_HOSTING_TEST_LIVE
 
   if (live) {
     const client = new BrewpageHostingSDK({
     })
 
-    let idmap: any = env['BREWPAGEHOSTING_TEST_STAT_ENTID']
+    let idmap: any = env['BREWPAGE_HOSTING_TEST_STAT_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

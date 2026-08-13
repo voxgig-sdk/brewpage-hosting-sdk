@@ -93,9 +93,9 @@ stat = client.Stat
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `total_resource` | `Integer` | No |  |
-| `total_view` | `Integer` | No |  |
-| `views_today` | `Integer` | No |  |
+| `totalResources` | `Integer` | No |  |
+| `totalViews` | `Integer` | No |  |
+| `viewsToday` | `Integer` | No |  |
 
 ### Operations
 

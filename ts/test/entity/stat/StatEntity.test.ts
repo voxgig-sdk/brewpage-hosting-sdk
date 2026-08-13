@@ -26,8 +26,8 @@ import {
 describe('StatEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when BREWPAGEHOSTING_TEST_LIVE=TRUE.
-  afterEach(liveDelay('BREWPAGEHOSTING_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when BREWPAGE_HOSTING_TEST_LIVE=TRUE.
+  afterEach(liveDelay('BREWPAGE_HOSTING_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = BrewpageHostingSDK.test()
@@ -62,7 +62,7 @@ describe('StatEntity', async () => {
     // LOAD
     const stat_ref01_ent = client.Stat()
     const stat_ref01_match_dt0: any = {}
-    const stat_ref01_data_dt0 = await stat_ref01_ent.load(stat_ref01_match_dt0)
+    const stat_ref01_data_dt0 = (await stat_ref01_ent.load(stat_ref01_match_dt0)).data()
     assert(null != stat_ref01_data_dt0)
 
 

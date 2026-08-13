@@ -258,9 +258,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"total_resource"` |  |
-| `"total_view"` |  |
-| `"views_today"` |  |
+| `"totalResources"` |  |
+| `"totalViews"` |  |
+| `"viewsToday"` |  |
 
 Operations: Load.
 
@@ -285,9 +285,9 @@ Create an instance: `stat := client.Stat(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `total_resource` | `int` |  |
-| `total_view` | `int` |  |
-| `views_today` | `int` |  |
+| `totalResources` | `int` |  |
+| `totalViews` | `int` |  |
+| `viewsToday` | `int` |  |
 
 #### Example: Load
 

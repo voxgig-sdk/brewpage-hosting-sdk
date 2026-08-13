@@ -7,14 +7,14 @@
 -- edit by hand.
 
 ---@class Stat
----@field total_resource? number
----@field total_view? number
----@field views_today? number
+---@field totalResources? number
+---@field totalViews? number
+---@field viewsToday? number
 
 ---@class StatLoadMatch
----@field total_resource? number
----@field total_view? number
----@field views_today? number
+---@field totalResources? number
+---@field totalViews? number
+---@field viewsToday? number
 
 local M = {}
 

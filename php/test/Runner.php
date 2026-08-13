@@ -43,8 +43,8 @@ class BrewpageHostingTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('BREWPAGEHOSTING_TEST_LIVE');
-        $override = self::getenv('BREWPAGEHOSTING_TEST_OVERRIDE');
+        $live = self::getenv('BREWPAGE_HOSTING_TEST_LIVE');
+        $override = self::getenv('BREWPAGE_HOSTING_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class BrewpageHostingTestRunner
             }
         }
 
-        $explain = self::getenv('BREWPAGEHOSTING_TEST_EXPLAIN');
+        $explain = self::getenv('BREWPAGE_HOSTING_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['BREWPAGEHOSTING_TEST_EXPLAIN'] = $explain;
+            $m['BREWPAGE_HOSTING_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

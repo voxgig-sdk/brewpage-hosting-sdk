@@ -10,35 +10,35 @@
 
 # Stat entity data model.
 #
-# @!attribute [rw] total_resource
+# @!attribute [rw] totalResources
 #   @return [Integer, nil]
 #
-# @!attribute [rw] total_view
+# @!attribute [rw] totalViews
 #   @return [Integer, nil]
 #
-# @!attribute [rw] views_today
+# @!attribute [rw] viewsToday
 #   @return [Integer, nil]
 Stat = Struct.new(
-  :total_resource,
-  :total_view,
-  :views_today,
+  :totalResources,
+  :totalViews,
+  :viewsToday,
   keyword_init: true
 )
 
 # Request payload for Stat#load.
 #
-# @!attribute [rw] total_resource
+# @!attribute [rw] totalResources
 #   @return [Integer, nil]
 #
-# @!attribute [rw] total_view
+# @!attribute [rw] totalViews
 #   @return [Integer, nil]
 #
-# @!attribute [rw] views_today
+# @!attribute [rw] viewsToday
 #   @return [Integer, nil]
 StatLoadMatch = Struct.new(
-  :total_resource,
-  :total_view,
-  :views_today,
+  :totalResources,
+  :totalViews,
+  :viewsToday,
   keyword_init: true
 )
 

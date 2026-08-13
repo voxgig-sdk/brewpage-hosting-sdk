@@ -34,7 +34,7 @@ client = BrewpageHostingSDK.new
 
 ```ruby
 begin
-  # load returns the bare Stat record (raises on error).
+  # load returns the ENTITY — call data_get for the Stat record (raises on error).
   stat = client.Stat.load()
   puts stat
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = BrewpageHostingSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 stat = client.Stat.load()
 puts stat
 ```
@@ -234,9 +235,9 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `total_resource` |  |
-| `total_view` |  |
-| `views_today` |  |
+| `totalResources` |  |
+| `totalViews` |  |
+| `viewsToday` |  |
 
 Operations: Load.
 
@@ -261,14 +262,14 @@ Create an instance: `stat = client.Stat`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `total_resource` | `Integer` |  |
-| `total_view` | `Integer` |  |
-| `views_today` | `Integer` |  |
+| `totalResources` | `Integer` |  |
+| `totalViews` | `Integer` |  |
+| `viewsToday` | `Integer` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Stat record (raises on error).
+# load returns the ENTITY — call data_get for the Stat record (raises on error).
 stat = client.Stat.load()
 ```
 

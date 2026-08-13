@@ -23,8 +23,8 @@ module BrewpageHostingTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("BREWPAGEHOSTING_TEST_LIVE")
-    override = getenv("BREWPAGEHOSTING_TEST_OVERRIDE")
+    live = getenv("BREWPAGE_HOSTING_TEST_LIVE")
+    override = getenv("BREWPAGE_HOSTING_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module BrewpageHostingTestRunner
       end
     end
 
-    explain = getenv("BREWPAGEHOSTING_TEST_EXPLAIN")
-    m["BREWPAGEHOSTING_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("BREWPAGE_HOSTING_TEST_EXPLAIN")
+    m["BREWPAGE_HOSTING_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

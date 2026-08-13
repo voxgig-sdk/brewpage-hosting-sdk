@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ BrewpageHostingUtility.registrar = ->(u) {
   u.prepare_params = BrewpageHostingUtilities::PrepareParams
   u.prepare_path = BrewpageHostingUtilities::PreparePath
   u.prepare_query = BrewpageHostingUtilities::PrepareQuery
+  u.graphql_body = BrewpageHostingUtilities::GraphqlBody
+  u.graphql_errors = BrewpageHostingUtilities::GraphqlErrors
   u.result_basic = BrewpageHostingUtilities::ResultBasic
   u.result_body = BrewpageHostingUtilities::ResultBody
   u.result_headers = BrewpageHostingUtilities::ResultHeaders

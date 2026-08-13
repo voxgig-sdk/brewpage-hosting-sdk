@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from brewpagehosting_sdk.utility.voxgig_struct import voxgig_struct as vs
 from brewpagehosting_sdk import BrewpageHostingSDK
-from core import helpers
+from brewpagehosting_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _stat_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "BREWPAGEHOSTING_TEST_STAT_ENTID": {},
-        "BREWPAGEHOSTING_TEST_LIVE": "FALSE",
+        "BREWPAGE_HOSTING_TEST_STAT_ENTID": {},
+        "BREWPAGE_HOSTING_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("BREWPAGEHOSTING_TEST_LIVE") == "TRUE"
+    live = env.get("BREWPAGE_HOSTING_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

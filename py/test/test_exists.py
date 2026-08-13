@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# BrewpageHosting SDK exists test
 
 import pytest
 from brewpagehosting_sdk import BrewpageHostingSDK

@@ -16,11 +16,11 @@
 import pytest
 
 from brewpagehosting_sdk import BrewpageHostingSDK
-from core.error import BrewpageHostingError
-from core.result import BrewpageHostingResult
-from core.response import BrewpageHostingResponse
-from core.spec import BrewpageHostingSpec
-from feature.base_feature import BrewpageHostingBaseFeature
+from brewpagehosting_sdk.core.error import BrewpageHostingError
+from brewpagehosting_sdk.core.result import BrewpageHostingResult
+from brewpagehosting_sdk.core.response import BrewpageHostingResponse
+from brewpagehosting_sdk.core.spec import BrewpageHostingSpec
+from brewpagehosting_sdk.feature.base_feature import BrewpageHostingBaseFeature
 
 
 def _client():

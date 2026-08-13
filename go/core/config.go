@@ -26,21 +26,21 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"active": true,
-						"name": "total_resource",
+						"name": "totalResources",
 						"req": false,
 						"type": "`$INTEGER`",
 						"index$": 0,
 					},
 					map[string]any{
 						"active": true,
-						"name": "total_view",
+						"name": "totalViews",
 						"req": false,
 						"type": "`$INTEGER`",
 						"index$": 1,
 					},
 					map[string]any{
 						"active": true,
-						"name": "views_today",
+						"name": "viewsToday",
 						"req": false,
 						"type": "`$INTEGER`",
 						"index$": 2,
@@ -55,6 +55,7 @@ func MakeConfig() map[string]any {
 							map[string]any{
 								"active": true,
 								"args": map[string]any{},
+								"kind": "http",
 								"method": "GET",
 								"orig": "/stats",
 								"parts": []any{
@@ -68,7 +69,6 @@ func MakeConfig() map[string]any {
 								"index$": 0,
 							},
 						},
-						"key$": "load",
 					},
 				},
 				"relations": map[string]any{

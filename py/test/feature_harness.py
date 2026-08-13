@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import BrewpageHostingControl
-from core.error import BrewpageHostingError
-from core.result import BrewpageHostingResult
-from core.spec import BrewpageHostingSpec
+from brewpagehosting_sdk.config import make_config
+from brewpagehosting_sdk.features import _make_feature
+from brewpagehosting_sdk.core.control import BrewpageHostingControl
+from brewpagehosting_sdk.core.error import BrewpageHostingError
+from brewpagehosting_sdk.core.result import BrewpageHostingResult
+from brewpagehosting_sdk.core.spec import BrewpageHostingSpec
 
 
 # True when this SDK was generated with the named feature.

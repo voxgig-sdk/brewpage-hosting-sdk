@@ -15,16 +15,16 @@ declare(strict_types=1);
 /** Stat entity data model. */
 class Stat
 {
-    public ?int $total_resource = null;
-    public ?int $total_view = null;
-    public ?int $views_today = null;
+    public ?int $totalResources = null;
+    public ?int $totalViews = null;
+    public ?int $viewsToday = null;
 }
 
 /** Request payload for Stat#load. */
 class StatLoadMatch
 {
-    public ?int $total_resource = null;
-    public ?int $total_view = null;
-    public ?int $views_today = null;
+    public ?int $totalResources = null;
+    public ?int $totalViews = null;
+    public ?int $viewsToday = null;
 }
 

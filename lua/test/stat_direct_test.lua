@@ -60,11 +60,11 @@ function stat_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["BREWPAGEHOSTING_TEST_STAT_ENTID"] = {},
-    ["BREWPAGEHOSTING_TEST_LIVE"] = "FALSE",
+    ["BREWPAGE_HOSTING_TEST_STAT_ENTID"] = {},
+    ["BREWPAGE_HOSTING_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["BREWPAGEHOSTING_TEST_LIVE"] == "TRUE"
+  local live = env["BREWPAGE_HOSTING_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

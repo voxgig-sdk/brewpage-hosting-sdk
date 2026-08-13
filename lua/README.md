@@ -225,9 +225,9 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `total_resource` |  |
-| `total_view` |  |
-| `views_today` |  |
+| `totalResources` |  |
+| `totalViews` |  |
+| `viewsToday` |  |
 
 Operations: Load.
 
@@ -252,9 +252,9 @@ Create an instance: `local stat = client:Stat(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `total_resource` | `number` |  |
-| `total_view` | `number` |  |
-| `views_today` | `number` |  |
+| `totalResources` | `number` |  |
+| `totalViews` | `number` |  |
+| `viewsToday` | `number` |  |
 
 #### Example: Load
 

@@ -92,9 +92,9 @@ $stat = $client->Stat();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `total_resource` | `int` | No |  |
-| `total_view` | `int` | No |  |
-| `views_today` | `int` | No |  |
+| `totalResources` | `int` | No |  |
+| `totalViews` | `int` | No |  |
+| `viewsToday` | `int` | No |  |
 
 ### Operations
 

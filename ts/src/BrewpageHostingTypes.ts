@@ -6,14 +6,14 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Stat {
-  total_resource?: number
-  total_view?: number
-  views_today?: number
+  totalResources?: number
+  totalViews?: number
+  viewsToday?: number
 }
 
 export interface StatLoadMatch {
-  total_resource?: number
-  total_view?: number
-  views_today?: number
+  totalResources?: number
+  totalViews?: number
+  viewsToday?: number
 }
 

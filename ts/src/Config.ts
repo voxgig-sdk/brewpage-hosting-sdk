@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'BrewpageHosting',
   }
 
 
@@ -56,21 +56,21 @@ class Config {
       "fields": [
         {
           "active": true,
-          "name": "total_resource",
+          "name": "totalResources",
           "req": false,
           "type": "`$INTEGER`",
           "index$": 0
         },
         {
           "active": true,
-          "name": "total_view",
+          "name": "totalViews",
           "req": false,
           "type": "`$INTEGER`",
           "index$": 1
         },
         {
           "active": true,
-          "name": "views_today",
+          "name": "viewsToday",
           "req": false,
           "type": "`$INTEGER`",
           "index$": 2
@@ -85,6 +85,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/stats",
               "parts": [

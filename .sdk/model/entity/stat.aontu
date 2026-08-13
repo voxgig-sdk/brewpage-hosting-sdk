@@ -6,17 +6,17 @@ main: kit: entity: stat: {
 
   fields: [
     {
-      name: "total_resource"
+      name: "totalResources"
       req: false
       type: "`$INTEGER`"
     }
     {
-      name: "total_view"
+      name: "totalViews"
       req: false
       type: "`$INTEGER`"
     }
     {
-      name: "views_today"
+      name: "viewsToday"
       req: false
       type: "`$INTEGER`"
     }

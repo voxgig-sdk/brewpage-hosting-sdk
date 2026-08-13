@@ -90,9 +90,9 @@ local stat = client:Stat(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `total_resource` | `number` | No |  |
-| `total_view` | `number` | No |  |
-| `views_today` | `number` | No |  |
+| `totalResources` | `number` | No |  |
+| `totalViews` | `number` | No |  |
+| `viewsToday` | `number` | No |  |
 
 ### Operations
 

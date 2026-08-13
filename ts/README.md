@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = BrewpageHostingSDK.test()
 
 const stat = await client.Stat().load()
-// stat is a bare entity populated with mock response data
+// stat is the entity, populated with mock response data
+// — call stat.data() for the record itself
 console.log(stat)
 ```
 
@@ -284,9 +285,9 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `total_resource` |  |
-| `total_view` |  |
-| `views_today` |  |
+| `totalResources` |  |
+| `totalViews` |  |
+| `viewsToday` |  |
 
 Operations: load.
 
@@ -311,9 +312,9 @@ Create an instance: `const stat = client.Stat()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `total_resource` | `number` |  |
-| `total_view` | `number` |  |
-| `views_today` | `number` |  |
+| `totalResources` | `number` |  |
+| `totalViews` | `number` |  |
+| `viewsToday` | `number` |  |
 
 #### Example: Load
 

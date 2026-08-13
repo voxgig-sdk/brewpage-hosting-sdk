@@ -38,7 +38,7 @@ client = BrewpageHostingSDK()
 
 ### 3. Load a stat
 
-`load()` returns the bare record (a `dict`) and raises on error.
+`load()` returns the ENTITY — call data_get() for the record — and raises on error.
 
 ```python
 try:
@@ -122,7 +122,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = BrewpageHostingSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 stat = client.Stat().load()
 # stat contains the mock response record
 ```
@@ -218,7 +219,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -240,9 +241,9 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `total_resource` |  |
-| `total_view` |  |
-| `views_today` |  |
+| `totalResources` |  |
+| `totalViews` |  |
+| `viewsToday` |  |
 
 Operations: Load.
 
@@ -267,9 +268,9 @@ Create an instance: `stat = client.Stat()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `total_resource` | `int` |  |
-| `total_view` | `int` |  |
-| `views_today` | `int` |  |
+| `totalResources` | `int` |  |
+| `totalViews` | `int` |  |
+| `viewsToday` | `int` |  |
 
 #### Example: Load
 
