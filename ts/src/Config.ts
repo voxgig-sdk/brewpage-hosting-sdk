@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://brewpage.app/api',
+    base: "https://brewpage.app/api",
 
     headers: {
       "content-type": "application/json"
@@ -55,25 +55,16 @@ class Config {
     "stat": {
       "fields": [
         {
-          "active": true,
           "name": "totalResources",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 0
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "totalViews",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 1
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "viewsToday",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 2
+          "type": "`$INTEGER`"
         }
       ],
       "name": "stat",
@@ -83,7 +74,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -95,11 +85,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

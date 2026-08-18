@@ -23,8 +23,8 @@ class BrewpageHostingSDK:
         utility = BrewpageHostingUtility()
         self._utility = utility
 
-        from brewpagehosting_sdk.config import make_config
-        config = make_config()
+        from brewpagehosting_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,

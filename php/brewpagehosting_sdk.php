@@ -40,7 +40,7 @@ class BrewpageHostingSDK
         $utility = new BrewpageHostingUtility();
         $this->_utility = $utility;
 
-        $config = BrewpageHostingConfig::make_config();
+        $config = BrewpageHostingConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

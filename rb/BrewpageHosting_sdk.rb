@@ -28,7 +28,7 @@ class BrewpageHostingSDK
     utility = BrewpageHostingUtility.new
     @_utility = utility
 
-    config = BrewpageHostingConfig.make_config
+    config = BrewpageHostingConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

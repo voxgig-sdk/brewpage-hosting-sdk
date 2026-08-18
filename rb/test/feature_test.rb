@@ -15,7 +15,7 @@ require_relative "../BrewpageHosting_sdk"
 module BrewpageHostingFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = BrewpageHostingConfig.make_config["feature"]
+    f = BrewpageHostingConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 
