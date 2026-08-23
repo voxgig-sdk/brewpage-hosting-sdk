@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "BrewpageHosting",
+			"slug": "brewpage-hosting",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,14 +36,17 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "totalResources",
+						"short": "Total number of resources hosted on the platform",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "totalViews",
+						"short": "Total number of views across all resources",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "viewsToday",
+						"short": "Number of views recorded today",
 						"type": "`$INTEGER`",
 					},
 				},

@@ -33,6 +33,9 @@ class BrewpageHostingConfig
         return [
             "main" => [
                 "name" => "BrewpageHosting",
+                "slug" => "brewpage-hosting",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -55,14 +58,17 @@ class BrewpageHostingConfig
           'fields' => [
             [
               'name' => 'totalResources',
+              'short' => 'Total number of resources hosted on the platform',
               'type' => '`$INTEGER`',
             ],
             [
               'name' => 'totalViews',
+              'short' => 'Total number of views across all resources',
               'type' => '`$INTEGER`',
             ],
             [
               'name' => 'viewsToday',
+              'short' => 'Number of views recorded today',
               'type' => '`$INTEGER`',
             ],
           ],

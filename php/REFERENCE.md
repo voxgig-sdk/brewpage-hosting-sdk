@@ -92,9 +92,9 @@ $stat = $client->Stat();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `totalResources` | `int` | No |  |
-| `totalViews` | `int` | No |  |
-| `viewsToday` | `int` | No |  |
+| `totalResources` | `int` | No | Total number of resources hosted on the platform |
+| `totalViews` | `int` | No | Total number of views across all resources |
+| `viewsToday` | `int` | No | Number of views recorded today |
 
 ### Operations
 

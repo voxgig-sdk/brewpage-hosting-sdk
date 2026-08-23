@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -285,9 +285,9 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `totalResources` |  |
-| `totalViews` |  |
-| `viewsToday` |  |
+| `totalResources` | Total number of resources hosted on the platform |
+| `totalViews` | Total number of views across all resources |
+| `viewsToday` | Number of views recorded today |
 
 Operations: load.
 
@@ -312,9 +312,9 @@ Create an instance: `const stat = client.Stat()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `totalResources` | `number` |  |
-| `totalViews` | `number` |  |
-| `viewsToday` | `number` |  |
+| `totalResources` | `number` | Total number of resources hosted on the platform |
+| `totalViews` | `number` | Total number of views across all resources |
+| `viewsToday` | `number` | Number of views recorded today |
 
 #### Example: Load
 

@@ -116,9 +116,9 @@ const stat = client.Stat()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `totalResources` | `number` | No |  |
-| `totalViews` | `number` | No |  |
-| `viewsToday` | `number` | No |  |
+| `totalResources` | `number` | No | Total number of resources hosted on the platform |
+| `totalViews` | `number` | No | Total number of views across all resources |
+| `viewsToday` | `number` | No | Number of views recorded today |
 
 ### Operations
 

@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'BrewpageHosting',
+        slug: "brewpage-hosting",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -56,14 +67,17 @@ class Config {
       "fields": [
         {
           "name": "totalResources",
+          "short": "Total number of resources hosted on the platform",
           "type": "`$INTEGER`"
         },
         {
           "name": "totalViews",
+          "short": "Total number of views across all resources",
           "type": "`$INTEGER`"
         },
         {
           "name": "viewsToday",
+          "short": "Number of views recorded today",
           "type": "`$INTEGER`"
         }
       ],

@@ -245,9 +245,9 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `totalResources` |  |
-| `totalViews` |  |
-| `viewsToday` |  |
+| `totalResources` | Total number of resources hosted on the platform |
+| `totalViews` | Total number of views across all resources |
+| `viewsToday` | Number of views recorded today |
 
 Operations: Load.
 
@@ -272,9 +272,9 @@ Create an instance: `$stat = $client->Stat();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `totalResources` | `int` |  |
-| `totalViews` | `int` |  |
-| `viewsToday` | `int` |  |
+| `totalResources` | `int` | Total number of resources hosted on the platform |
+| `totalViews` | `int` | Total number of views across all resources |
+| `viewsToday` | `int` | Number of views recorded today |
 
 #### Example: Load
 

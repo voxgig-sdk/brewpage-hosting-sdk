@@ -235,9 +235,9 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `totalResources` |  |
-| `totalViews` |  |
-| `viewsToday` |  |
+| `totalResources` | Total number of resources hosted on the platform |
+| `totalViews` | Total number of views across all resources |
+| `viewsToday` | Number of views recorded today |
 
 Operations: Load.
 
@@ -262,9 +262,9 @@ Create an instance: `stat = client.Stat`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `totalResources` | `Integer` |  |
-| `totalViews` | `Integer` |  |
-| `viewsToday` | `Integer` |  |
+| `totalResources` | `Integer` | Total number of resources hosted on the platform |
+| `totalViews` | `Integer` | Total number of views across all resources |
+| `viewsToday` | `Integer` | Number of views recorded today |
 
 #### Example: Load
 

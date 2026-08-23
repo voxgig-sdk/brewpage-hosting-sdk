@@ -6,7 +6,7 @@ The Golang SDK for the BrewpageHosting API — an entity-oriented client using s
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Stat(nil)` — each with the same small set of operations (`Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,9 +258,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"totalResources"` |  |
-| `"totalViews"` |  |
-| `"viewsToday"` |  |
+| `"totalResources"` | Total number of resources hosted on the platform |
+| `"totalViews"` | Total number of views across all resources |
+| `"viewsToday"` | Number of views recorded today |
 
 Operations: Load.
 
@@ -285,9 +285,9 @@ Create an instance: `stat := client.Stat(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `totalResources` | `int` |  |
-| `totalViews` | `int` |  |
-| `viewsToday` | `int` |  |
+| `totalResources` | `int` | Total number of resources hosted on the platform |
+| `totalViews` | `int` | Total number of views across all resources |
+| `viewsToday` | `int` | Number of views recorded today |
 
 #### Example: Load
 

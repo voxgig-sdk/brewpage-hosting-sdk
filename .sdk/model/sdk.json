@@ -36,18 +36,21 @@
               "active": true,
               "name": "totalResources",
               "req": false,
+              "short": "Total number of resources hosted on the platform",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "totalViews",
               "req": false,
+              "short": "Total number of views across all resources",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "viewsToday",
               "req": false,
+              "short": "Number of views recorded today",
               "type": "`$INTEGER`"
             }
           ],
