@@ -58,13 +58,18 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/stats",
-                ["parts"] = {
-                  "stats",
+                ["segments"] = {
+                  {
+                    ["lit"] = "stats",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "stats",
                 },
               },
             },

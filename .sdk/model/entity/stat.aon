@@ -33,8 +33,10 @@ main: kit: entity: stat: {
         {
           method: "GET"
           orig: "/stats"
-          parts: [
-            "stats"
+          segments: [
+            {
+              lit: "stats"
+            }
           ]
           transform: {
             req: "`reqdata`"

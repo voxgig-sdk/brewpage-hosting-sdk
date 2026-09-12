@@ -84,13 +84,18 @@ class BrewpageHostingConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/stats',
-                  'parts' => [
-                    'stats',
+                  'segments' => [
+                    [
+                      'lit' => 'stats',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'stats',
                   ],
                 ],
               ],
