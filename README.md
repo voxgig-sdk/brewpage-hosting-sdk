@@ -105,7 +105,7 @@ local result, err = client:Stat():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
+| TypeScript | `@voxgig-sdk/brewpage-hosting-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
 | Python | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
 | PHP | `voxgig-sdk/brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/brewpage-hosting-sdk/go` | `go get github.com/voxgig-sdk/brewpage-hosting-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Stat():load()
 ### TypeScript
 
 ```ts
-import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting'
+import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting-sdk'
 
 const client = new BrewpageHostingSDK()
 

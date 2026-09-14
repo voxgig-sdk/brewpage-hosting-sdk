@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting'
+import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting-sdk'
 
 const client = new BrewpageHostingSDK()
 ```
@@ -405,7 +405,7 @@ brewpage-hosting/
 Import the SDK from the package root:
 
 ```ts
-import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting'
+import { BrewpageHostingSDK } from '@voxgig-sdk/brewpage-hosting-sdk'
 ```
 
 ### Entity state
