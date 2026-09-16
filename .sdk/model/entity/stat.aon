@@ -31,6 +31,12 @@ main: kit: entity: stat: {
       name: "load"
       points: [
         {
+          contract: {
+            id: "GET /stats"
+            json: "{\"operationId\":\"getStats\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"totalResources\":{\"description\":\"Total number of resources hosted on the platform\",\"example\":5000,\"type\":\"integer\"},\"totalViews\":{\"description\":\"Total number of views across all resources\",\"example\":1000000,\"type\":\"integer\"},\"viewsToday\":{\"description\":\"Number of views recorded today\",\"example\":1500,\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Successful response with platform statistics\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"example\":\"Internal server error\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/stats"
           segments: [

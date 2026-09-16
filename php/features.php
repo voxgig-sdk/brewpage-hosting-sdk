@@ -4,7 +4,10 @@ declare(strict_types=1);
 // BrewpageHosting SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class BrewpageHostingFeatures
@@ -14,8 +17,14 @@ class BrewpageHostingFeatures
         switch ($name) {
             case "base":
                 return new BrewpageHostingBaseFeature();
+            case "ratelimit":
+                return new BrewpageHostingRatelimitFeature();
+            case "retry":
+                return new BrewpageHostingRetryFeature();
             case "test":
                 return new BrewpageHostingTestFeature();
+            case "timeout":
+                return new BrewpageHostingTimeoutFeature();
             default:
                 return new BrewpageHostingBaseFeature();
         }
@@ -31,7 +40,10 @@ class BrewpageHostingFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

@@ -1,12 +1,18 @@
 # BrewpageHosting SDK feature factory
 
 from brewpagehosting_sdk.feature.base_feature import BrewpageHostingBaseFeature
+from brewpagehosting_sdk.feature.ratelimit_feature import BrewpageHostingRatelimitFeature
+from brewpagehosting_sdk.feature.retry_feature import BrewpageHostingRetryFeature
 from brewpagehosting_sdk.feature.test_feature import BrewpageHostingTestFeature
+from brewpagehosting_sdk.feature.timeout_feature import BrewpageHostingTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: BrewpageHostingBaseFeature(),
+    "ratelimit": lambda: BrewpageHostingRatelimitFeature(),
+    "retry": lambda: BrewpageHostingRetryFeature(),
     "test": lambda: BrewpageHostingTestFeature(),
+    "timeout": lambda: BrewpageHostingTimeoutFeature(),
 }
 
 
