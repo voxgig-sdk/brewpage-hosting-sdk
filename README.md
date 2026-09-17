@@ -105,12 +105,12 @@ local result, err = client:Stat():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/brewpage-hosting-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
-| Python | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
-| PHP | `voxgig-sdk/brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
+| TypeScript | `@voxgig-sdk/brewpage-hosting-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/tags) |
+| Python | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/tags) |
+| PHP | `voxgig-sdk/brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/brewpage-hosting-sdk/go` | `go get github.com/voxgig-sdk/brewpage-hosting-sdk/go@latest` |
-| Ruby | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
-| Lua | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/releases) |
+| Ruby | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/tags) |
+| Lua | `voxgig-sdk-brewpage-hosting` | publish pending — [install from git tag](https://github.com/voxgig-sdk/brewpage-hosting-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/brewpage-hosting-sdk/go-cli` | `go install github.com/voxgig-sdk/brewpage-hosting-sdk/go-cli/cmd/brewpage-hosting@latest` |
 | Go MCP server | `github.com/voxgig-sdk/brewpage-hosting-sdk/go-mcp` | `go get github.com/voxgig-sdk/brewpage-hosting-sdk/go-mcp@latest` |
 
