@@ -1,0 +1,60 @@
+# Entity: stat
+
+main: kit: entity: stat: {
+
+  alias: field: {}
+
+  fields: {
+    totalResources: {
+      h: "Total Resources"
+      n: "totalResources"
+      r: false
+      sh: "Total number of resources hosted on the platform"
+      t: "`$INTEGER`"
+    }
+    totalViews: {
+      h: "Total Views"
+      n: "totalViews"
+      r: false
+      sh: "Total number of views across all resources"
+      t: "`$INTEGER`"
+    }
+    viewsToday: {
+      h: "Views Today"
+      n: "viewsToday"
+      r: false
+      sh: "Number of views recorded today"
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "stat"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /stats"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/stats"
+          s: [
+            {
+              lit: "stats"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,18 +132,21 @@ class Config {
       "fields": [
         {
           "name": "totalResources",
-          "short": "Total number of resources hosted on the platform",
-          "type": "`$INTEGER`"
+          "title": "Total Resources",
+          "type": "`$INTEGER`",
+          "short": "Total number of resources hosted on the platform"
         },
         {
           "name": "totalViews",
-          "short": "Total number of views across all resources",
-          "type": "`$INTEGER`"
+          "title": "Total Views",
+          "type": "`$INTEGER`",
+          "short": "Total number of views across all resources"
         },
         {
           "name": "viewsToday",
-          "short": "Number of views recorded today",
-          "type": "`$INTEGER`"
+          "title": "Views Today",
+          "type": "`$INTEGER`",
+          "short": "Number of views recorded today"
         }
       ],
       "name": "stat",
@@ -160,7 +156,6 @@ class Config {
           "name": "load",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/stats",
@@ -169,14 +164,16 @@ class Config {
                   "lit": "stats"
                 }
               ],
-              "select": {},
+              "parts": [
+                "stats"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "stats"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }

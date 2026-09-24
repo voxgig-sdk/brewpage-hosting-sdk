@@ -1,7 +1,7 @@
 // Typed models for the BrewpageHosting SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,9 +14,6 @@ import (
 
 // Stat is the typed data model for the stat entity.
 type Stat struct {
-	TotalResources *int `json:"totalResources,omitempty"`
-	TotalViews *int `json:"totalViews,omitempty"`
-	ViewsToday *int `json:"viewsToday,omitempty"`
 }
 
 // StatLoadMatch is the typed request payload for Stat.LoadTyped.

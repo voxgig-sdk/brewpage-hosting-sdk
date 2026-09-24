@@ -87,18 +87,21 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "totalResources",
-            ["short"] = "Total number of resources hosted on the platform",
+            ["title"] = "Total Resources",
             ["type"] = "`$INTEGER`",
+            ["short"] = "Total number of resources hosted on the platform",
           },
           {
             ["name"] = "totalViews",
-            ["short"] = "Total number of views across all resources",
+            ["title"] = "Total Views",
             ["type"] = "`$INTEGER`",
+            ["short"] = "Total number of views across all resources",
           },
           {
             ["name"] = "viewsToday",
-            ["short"] = "Number of views recorded today",
+            ["title"] = "Views Today",
             ["type"] = "`$INTEGER`",
+            ["short"] = "Number of views recorded today",
           },
         },
         ["name"] = "stat",
@@ -108,7 +111,6 @@ local function make_config()
             ["name"] = "load",
             ["points"] = {
               {
-                ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/stats",
@@ -117,14 +119,16 @@ local function make_config()
                     ["lit"] = "stats",
                   },
                 },
-                ["select"] = {},
+                ["parts"] = {
+                  "stats",
+                },
+                ["rename"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
                 },
-                ["parts"] = {
-                  "stats",
-                },
+                ["args"] = {},
+                ["select"] = {},
               },
             },
           },

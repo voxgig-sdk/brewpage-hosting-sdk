@@ -91,18 +91,21 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "totalResources",
-						"short": "Total number of resources hosted on the platform",
+						"title": "Total Resources",
 						"type": "`$INTEGER`",
+						"short": "Total number of resources hosted on the platform",
 					},
 					map[string]any{
 						"name": "totalViews",
-						"short": "Total number of views across all resources",
+						"title": "Total Views",
 						"type": "`$INTEGER`",
+						"short": "Total number of views across all resources",
 					},
 					map[string]any{
 						"name": "viewsToday",
-						"short": "Number of views recorded today",
+						"title": "Views Today",
 						"type": "`$INTEGER`",
+						"short": "Number of views recorded today",
 					},
 				},
 				"name": "stat",
@@ -112,7 +115,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/stats",
@@ -121,14 +123,16 @@ func MakeConfig() map[string]any {
 										"lit": "stats",
 									},
 								},
-								"select": map[string]any{},
+								"parts": []any{
+									"stats",
+								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"stats",
-								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

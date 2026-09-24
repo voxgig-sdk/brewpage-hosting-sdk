@@ -24,35 +24,104 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "stat": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "totalResources",
-              "req": false,
-              "short": "Total number of resources hosted on the platform",
-              "type": "`$INTEGER`"
+          "fields": {
+            "totalResources": {
+              "a": true,
+              "h": "Total Resources",
+              "n": "totalResources",
+              "r": false,
+              "sh": "Total number of resources hosted on the platform",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "totalViews",
-              "req": false,
-              "short": "Total number of views across all resources",
-              "type": "`$INTEGER`"
+            "totalViews": {
+              "a": true,
+              "h": "Total Views",
+              "n": "totalViews",
+              "r": false,
+              "sh": "Total number of views across all resources",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "viewsToday",
-              "req": false,
-              "short": "Number of views recorded today",
-              "type": "`$INTEGER`"
+            "viewsToday": {
+              "a": true,
+              "h": "Views Today",
+              "n": "viewsToday",
+              "r": false,
+              "sh": "Number of views recorded today",
+              "t": "`$INTEGER`"
             }
-          ],
+          },
           "name": "stat",
           "op": {
             "load": {
@@ -60,24 +129,24 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /stats",
-                    "json": "{\"operationId\":\"getStats\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"totalResources\":{\"description\":\"Total number of resources hosted on the platform\",\"example\":5000,\"type\":\"integer\"},\"totalViews\":{\"description\":\"Total number of views across all resources\",\"example\":1000000,\"type\":\"integer\"},\"viewsToday\":{\"description\":\"Number of views recorded today\",\"example\":1500,\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Successful response with platform statistics\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"example\":\"Internal server error\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/stats",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "stats"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -506,17 +575,17 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "stat_ref01",
                 "srcdatavar": "stat_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {},
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {
