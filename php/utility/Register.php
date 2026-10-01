@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 BrewpageHostingUtility::setRegistrar(function (BrewpageHostingUtility $u): void {
     $u->clean = [BrewpageHostingClean::class, 'call'];
+    $u->clean_add = [BrewpageHostingClean::class, 'add'];
+    $u->clean_explain = [BrewpageHostingDone::class, 'clean_explain'];
     $u->done = [BrewpageHostingDone::class, 'call'];
     $u->make_error = [BrewpageHostingMakeError::class, 'call'];
     $u->feature_add = [BrewpageHostingFeatureAdd::class, 'call'];

@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 BrewpageHostingUtility.registrar = ->(u) {
   u.clean = BrewpageHostingUtilities::Clean
+  u.clean_add = BrewpageHostingUtilities::CleanAdd
+  u.clean_explain = BrewpageHostingUtilities::CleanExplain
   u.done = BrewpageHostingUtilities::Done
   u.make_error = BrewpageHostingUtilities::MakeError
   u.feature_add = BrewpageHostingUtilities::FeatureAdd
