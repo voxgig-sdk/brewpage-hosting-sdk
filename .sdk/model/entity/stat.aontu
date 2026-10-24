@@ -41,6 +41,10 @@ main: kit: entity: stat: {
           }
           m: "GET"
           o: "/stats"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "stats"

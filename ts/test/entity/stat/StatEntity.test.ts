@@ -9,7 +9,7 @@ import { createLiveTransport } from '../../live-runner'
 import { runLiveEntity } from '../../live-entity'
 
 
-import { BrewpageHostingSDK, BaseFeature, stdutil } from '../../..'
+import { BrewpageHostingSDK, BaseFeature, config, stdutil } from '../../..'
 
 import {
   envOverride,
@@ -41,6 +41,18 @@ describe('StatEntity', async () => {
   })
 
 
+  test('validate', async (t) => {
+    if (null == (config as any).feature?.validate) {
+      t.skip('feature not present in this SDK: validate')
+      return
+    }
+    const client = BrewpageHostingSDK.test(undefined, { feature: { validate: { active: true } } })
+    await assert.rejects(client.Stat().load({"totalResources":"x"} as any),
+      (err: any) => 'validate_failed' === err.code)
+  })
+
+
+
   test('basic', async (t) => {
 
     const live = 'TRUE' === process.env.BREWPAGE_HOSTING_TEST_LIVE
@@ -51,7 +63,7 @@ describe('StatEntity', async () => {
     
     const setup = basicSetup()
     if (setup.live) {
-      return runLiveEntity(setup, {"active":true,"alias":{"field":{}},"fields":{"totalResources":{"a":true,"h":"Total Resources","n":"totalResources","r":false,"sh":"Total number of resources hosted on the platform","t":"`$INTEGER`","key$":"totalResources","index$":0},"totalViews":{"a":true,"h":"Total Views","n":"totalViews","r":false,"sh":"Total number of views across all resources","t":"`$INTEGER`","key$":"totalViews","index$":1},"viewsToday":{"a":true,"h":"Views Today","n":"viewsToday","r":false,"sh":"Number of views recorded today","t":"`$INTEGER`","key$":"viewsToday","index$":2}},"name":"stat","op":{"load":{"input":"data","name":"load","points":[{"a":true,"co":{"id":"GET /stats","source":"openapi3","version":2},"g":{},"k":"http","m":"GET","o":"/stats","q":{},"r":{},"s":[{"lit":"stats"}],"t":{"req":"`reqdata`","res":"`body`"},"index$":0}],"key$":"load"}},"relations":{"ancestors":[]},"key$":"stat","name__orig":"stat","Name":"Stat","name_":"stat","name-":"stat","NAME":"STAT","index$":0}, {"active":true,"entity":"stat","key$":"BasicStatFlow","kind":"basic","name":"BasicStatFlow","param":{},"step":[{"a":true,"d":{},"i":{"ref":"stat_ref01","srcdatavar":"stat_ref01_data","suffix":"_dt0"},"m":{},"o":"load","s":[],"v":[{"apply":"TextFieldMark","def":{"mark":"Mark01-stat_ref01"}}],"index$":0}]}, 'Stat', {"GET /stats":{"protocol":"http","parameters":[]}})
+      return runLiveEntity(setup, {"active":true,"alias":{"field":{}},"fields":{"totalResources":{"a":true,"h":"Total Resources","n":"totalResources","r":false,"sh":"Total number of resources hosted on the platform","t":"`$INTEGER`","key$":"totalResources","index$":0},"totalViews":{"a":true,"h":"Total Views","n":"totalViews","r":false,"sh":"Total number of views across all resources","t":"`$INTEGER`","key$":"totalViews","index$":1},"viewsToday":{"a":true,"h":"Views Today","n":"viewsToday","r":false,"sh":"Number of views recorded today","t":"`$INTEGER`","key$":"viewsToday","index$":2}},"name":"stat","op":{"load":{"input":"data","name":"load","points":[{"a":true,"co":{"id":"GET /stats","source":"openapi3","version":2},"g":{},"k":"http","m":"GET","o":"/stats","q":{},"r":{},"rs":{"kind":"json","media":"application/json"},"s":[{"lit":"stats"}],"t":{"req":"`reqdata`","res":"`body`"},"index$":0}],"key$":"load"}},"relations":{"ancestors":[]},"key$":"stat","name__orig":"stat","Name":"Stat","name_":"stat","name-":"stat","NAME":"STAT","index$":0}, {"active":true,"entity":"stat","key$":"BasicStatFlow","kind":"basic","name":"BasicStatFlow","param":{},"step":[{"a":true,"d":{},"i":{"ref":"stat_ref01","srcdatavar":"stat_ref01_data","suffix":"_dt0"},"m":{},"o":"load","s":[],"v":[{"apply":"TextFieldMark","def":{"mark":"Mark01-stat_ref01"}}],"index$":0}]}, 'Stat', {"GET /stats":{"protocol":"http","parameters":[]}}, { strict: LIVE_STRICT, t })
     }
     const client = setup.client
     const struct = setup.struct
@@ -72,6 +84,12 @@ describe('StatEntity', async () => {
 })
 
 
+
+// main.kit.test.live.strict is true (the default is true): a live
+// request that fails, or a live test missing an input it needs,
+// fails the test.
+// An account with no record for a test to read skips it either way.
+const LIVE_STRICT = true
 
 function basicSetup(extra?: any) {
   // TODO: fix test def options

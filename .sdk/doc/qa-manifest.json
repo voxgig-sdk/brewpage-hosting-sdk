@@ -3,5 +3,15 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "BrewPage API Server",
+      "BrewPage is a hosting platform that allows users to publish HTML pages, key-value data, JSON documents, and files without the need for signup. Users can publish content instantly through various methods, including a web interface, API calls, and integration with AI agents.",
+      "Number of views recorded today",
+      "Successful response with platform statistics",
+      "Total number of resources hosted on the platform",
+      "Total number of views across all resources"
+    ]
+  }
 }

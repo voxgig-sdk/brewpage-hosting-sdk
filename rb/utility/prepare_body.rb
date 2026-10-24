@@ -1,6 +1,9 @@
 # BrewpageHosting SDK utility: prepare_body
+require_relative 'media'
 module BrewpageHostingUtilities
   PrepareBody = ->(ctx) {
-    ctx.op.input == "data" ? ctx.utility.transform_request.call(ctx) : nil
+    return nil unless ctx.op.input == "data"
+    return BrewpageHostingUtilities.raw_body(ctx.reqdata) if BrewpageHostingUtilities.raw_request?(ctx.point)
+    ctx.utility.transform_request.call(ctx)
   }
 end
